@@ -22,7 +22,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          name: 'github-pages'
+          name: 'github-page'
           path: 'build/.'
   deploy:
     needs: build
@@ -38,3 +38,5 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Deploy
         uses: actions/deploy-pages@v4
+        with:
+          artifact_name: 'github-page'
