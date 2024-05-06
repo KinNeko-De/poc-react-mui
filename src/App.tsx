@@ -1,5 +1,5 @@
-import * as React from 'react';
-import Button from '@mui/material/Button';
+import Greeting from './layout/header';
+import Footer from './layout/footer';
 import logo from './logo.svg';
 import './App.css';
 
@@ -14,7 +14,8 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Button variant="contained">Hello React</Button>
+          <Greeting name={"Nils"}></Greeting>
+          <Footer name={"React"}></Footer>
         </a>
       </header>
     </div>
