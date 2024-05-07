@@ -10,22 +10,26 @@ export function useColorScheme() {
     undefined
   );
 
-  const [isDark, setIsDark] = useState(false);
-  const value = useMemo(
-    () => (isDark === undefined ? !!systemPrefersDark : isDark),
-    [isDark, systemPrefersDark]
-  );
+  const [isDark, setIsDark] = useState(() => {
+    const userPreference = localStorage.getItem('isDark');
+    if (userPreference !== null) {
+      return JSON.parse(userPreference);
+    } else {
+      return !!systemPrefersDark;
+    }
+  });
 
   useEffect(() => {
-    if (value) {
+    localStorage.setItem('isDark', JSON.stringify(isDark));
+    if (isDark) {
       document.body.classList.add("dark");
     } else {
       document.body.classList.remove("dark");
     }
-  }, [value]);
+  }, [isDark]);
 
   return {
-    isDark: value,
+    isDark,
     setIsDark,
   };
 }
