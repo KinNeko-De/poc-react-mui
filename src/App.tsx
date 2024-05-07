@@ -2,6 +2,7 @@ import Greeting from './layout/header';
 import Footer from './layout/footer';
 import logo from './logo.svg';
 import './App.css';
+import { DarkModeToggle } from './layout/darkmode';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Greeting name={"Nils"}></Greeting>
           <Footer name={"React"}></Footer>
         </a>
+        <DarkModeToggle></DarkModeToggle>
       </header>
     </div>
   );
