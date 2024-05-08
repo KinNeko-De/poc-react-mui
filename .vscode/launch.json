@@ -10,7 +10,8 @@
       "name": "Start using Default browser",
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run-script", "start"],
-      "skipFiles": ["<node_internals>/**"]
+      "skipFiles": ["<node_internals>/**"],
+      "outFiles": ["${workspaceFolder}/dist/**/*.js"]
     },
     {
       "type": "node",
