@@ -26,6 +26,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "startsilent": "set \"BROWSER=none\" && react-scripts start",
     "startchrome": "set \"BROWSER=none\" && start chrome http://localhost:3000/poc-react-mui && react-scripts start",
     "startfirefox": "set \"BROWSER=none\" && start firefox http://localhost:3000/poc-react-mui && react-scripts start",
     "startchromeincognito": "set \"BROWSER=none\" && start chrome http://localhost:3000/poc-react-mui /incognito && react-scripts start",

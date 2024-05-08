@@ -10,8 +10,7 @@
       "name": "Start using Default browser",
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run-script", "start"],
-      "skipFiles": ["<node_internals>/**"],
-      "outFiles": ["${workspaceFolder}/dist/**/*.js"]
+      "skipFiles": ["<node_internals>/**"]
     },
     {
       "type": "node",
@@ -45,5 +44,27 @@
       "runtimeArgs": ["run-script", "startfirefoxprivate"],
       "skipFiles": ["<node_internals>/**"]
     },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Start only app",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run-script", "startsilent"],
+      "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Debug with Chrome",
+      "url": "http://localhost:3000/poc-react-mui",
+      "webRoot": "${workspaceFolder}"
+    },
+    {
+      "type": "firefox",
+      "request": "launch",
+      "name": "Debug with Firefox",
+      "url": "http://localhost:3000/poc-react-mui",
+      "webRoot": "${workspaceFolder}"
+    }
   ]
 }
