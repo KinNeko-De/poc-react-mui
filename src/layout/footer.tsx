@@ -1,10 +1,10 @@
 import Button from '@mui/material/Button';
 
-type Props = {
+interface FooterProps {
   name: string
 };
 
-function Footer({ name }: Props) {
+function Footer({ name }: FooterProps) {
   return <Button variant="contained">Hello {name}!</Button>
 }
 
