@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Children } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
@@ -7,11 +7,18 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import Ghost from './Wooooho/ghost';
 
 const router = createBrowserRouter([
   {
     path: "/poc-react-mui",
     element: <App/>,
+    children: [
+      {
+        path: 'ghost',
+        element: <Ghost />,
+      },
+    ],
   },
 ]);
 

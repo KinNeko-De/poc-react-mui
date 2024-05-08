@@ -1,0 +1,52 @@
+/* Ghost.css */
+.ghost-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.ghost {
+  background: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50% 50% 50% 50%/60% 60% 40% 40%;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.ghost::before,
+.ghost::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -20px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: white;
+}
+
+.ghost::before {
+  left: -10px;
+}
+
+.ghost::after {
+  right: -10px;
+}
+
+.eyes {
+  position: relative;
+  top: 15px;
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  margin: auto;
+}
+
+.eye {
+  background: black;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
