@@ -5,19 +5,45 @@ import reportWebVitals from './reportWebVitals';
 import App from './App';
 import {
   createBrowserRouter,
+  Outlet,
   RouterProvider,
 } from "react-router-dom";
 import Ghost from './Wooooho/ghost';
+import Layout from './Layout';
 
 const router = createBrowserRouter([
   {
     path: "/poc-react-mui",
-    element: <App/>,
+    element: <App></App>,
     children: [
       {
         path: 'ghost',
         element: <Ghost />,
       },
+    ],
+  },
+  {
+    path: "/poc-react-mui/second",
+    element: <Layout><Outlet /></Layout>,
+    children: [
+      {
+        index: true,
+        element: <Ghost />,
+      },
+      {
+        path: 'ghost',
+        element: <div><Ghost /><Outlet/></div>,
+        children: [
+          { index: true, element: <Ghost /> },
+          {
+            path: "more",
+            element: <div><Ghost /><Ghost /></div>,
+          },
+          
+        ],
+      },
+      
+
     ],
   },
 ]);

@@ -5,9 +5,6 @@ import './App.css';
 import { DarkModeToggle } from './layout/darkmode';
 import { useNavigate, Outlet } from 'react-router-dom';
 import { Button } from '@mui/material';
-import { Children } from 'react';
-
-
 
 function App() {
   const navigate = useNavigate();
@@ -29,10 +26,12 @@ function App() {
         <Button variant="contained" color="primary" onClick={() => navigate('/poc-react-mui/ghost')}>
   Go to Ghost
 </Button>
-<Outlet />
+<Outlet /> 
       </header>
-    </div>
-  );
+
+    </div> 
+    
+    );
 }
 
 export default App;
