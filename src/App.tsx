@@ -26,6 +26,9 @@ function App() {
         <Button variant="contained" color="primary" onClick={() => navigate('/poc-react-mui/ghost')}>
   Go to Ghost
 </Button>
+<Button variant="contained" color="primary" onClick={() => navigate('/poc-react-mui/second')}>
+  Go to Second
+</Button>
 <Outlet /> 
       </header>
 
